@@ -3,8 +3,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Scope+One&display=swap');
 
 :root{
-    --font--banner--semi: url("/public/fonts/segoeuithis.ttf");
-    --font--banner--bool: url("/public/fonts/segoeuithibd.ttf");
+    --font--banner--semi: url("/fonts/segoeuithis.ttf");
+    --font--banner--bool: url("/fonts/segoeuithibd.ttf");
     --font--parrafo: "Space Mono";
     --font--header: "Sedan";
     --font--testimoni: "Modern Antiqua";
@@ -42,7 +42,7 @@
 .fondo{
     width: 100%;
     height: 100%;
-    background-image: url("/public/img/color_fondo_login.svg");
+    background-image: url("/img/color_fondo_login.svg");
     display: flex;
     justify-content: center;
     align-items: center;
@@ -64,7 +64,7 @@
 }
 
 .content_form form{
-    width: 60%;
+    width: 50%;
     display: flex;
     flex-direction: column;
 }
@@ -78,7 +78,7 @@
 
 .content_form form input{
     width: 100%;
-    height: 42px;
+    height: 45px;
     border-radius: 10px;
     border: none;
     padding-left: 1rem;

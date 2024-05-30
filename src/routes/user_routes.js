@@ -17,14 +17,18 @@ router.get('/registro', (req, res) => {
     res.render('registro');
 });
 
+router.get('/subasta', (req, res) => {
+    res.render('subastas');
+});
+
 router.post('/login', (req, res) => {
-    const consulta = 'SELECT nombre, contraseña FROM subastaonline.usuarios;';
+    const consulta = 'SELECT nombre, contraseña FROM usuarios;';
     const { usuario, contra } = req.body;
 
     conexion.query(consulta, function (err, result, fields) {
         if (err) {
             console.error('Error al realizar la consulta: ', err);
-            res.status(500).send('Error interno del servidor');
+            res.status(500).json({ message: 'Error interno del servidor' });
             return;
         }
 
@@ -35,10 +39,11 @@ router.post('/login', (req, res) => {
         // Comprobar si se encontró un usuario con la contraseña correcta
         const usuarioEncontrado = result.find(user => user.nombre === usuario && user.contraseña === contra);
         if (usuarioEncontrado) {
-            res.render('subastas');
+            res.json({ success: true, redirect: '/user/' });
+            //res.render('home', { usuario });
         } else {
             console.log('Usuario o contraseña incorrectos');
-            res.status(401).send('Usuario o contraseña incorrectos');
+            res.status(401).json({ message: 'Usuario o contraseña incorrectos' });
         }
     });
 });
