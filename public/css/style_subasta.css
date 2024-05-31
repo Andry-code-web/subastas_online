@@ -152,13 +152,10 @@ header nav a:hover{
 
 .property-listing {
     width: 100%;
-    /* display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem; */
 }
 
 .content_filtro{
-    width: 50%;
+    width: 30%;
 }
 
 .content_filtro h2{
@@ -225,6 +222,7 @@ header nav a:hover{
 }
 
 .property-card {
+    height: 30vh;
     background-color: #fff;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     border-radius: 0.5rem;
@@ -232,17 +230,68 @@ header nav a:hover{
     display: flex;
 }
 
-.property-card img {
-    width: 150px;
-    height: 150px;
-    object-fit: cover;
+.slider{
+    width: 40%;
+    height: 100%;
 }
+
+.carousel-inner{
+    height: 100%;
+}
+
+.carousel-item{
+    height: 100%;
+}
+
+.carousel img{
+    height: 100%;
+}
+
+.img_flechas img{
+    width: 25px;
+}
+
 
 .property-card-content {
-    padding: 1rem;
+    width: 100%;
+    display: flex;
+    padding: 3rem;
 }
 
-.property-card-content h3 {
+.content_info{
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.nombre_tipo h3{
+    font-size: 1.1rem;
+    font-family: var(--font--banner--bool);
+}
+
+.nombre_tipo p{
+    font-size: .8rem;
+    font-family: var(--font--banner--semi);
+    margin-top: -.7rem;
+    color: #757575;
+    font-weight: 600;
+}
+
+.content_info .ubicacion{
+    font-family: var(--font--parrafo);
+    letter-spacing: -.01rem;
+    font-size: .9rem;
+}
+
+.content_info .precio{
+    font-size: 1rem;
+    font-weight: 300;
+    font-family: var(--font--banner--bool);
+}
+
+.property-card-content .content_info h3 {
     font-size: 1.5rem;
     font-weight: bold;
     margin-bottom: 0.5rem;
@@ -258,11 +307,31 @@ header nav a:hover{
 }
 
 .property-card-content .features {
+    width: 30%;
     display: flex;
     gap: 0.5rem;
     color: #4a5568;
+    flex-wrap: wrap;
+    flex-direction: column;
+    row-gap: 1rem;
 }
 
-.property-card-content .features i {
-    margin-right: 0.25rem;
+.property-card-content .features .imgenes{
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+}
+
+.property-card-content .features .imgenes p{
+    font-size: 1rem;
+    font-family: var(--font--parrafo);
+}
+
+.property-card-content .features .imgenes img {
+    width: 60%;
+    height: 60%;
+    object-fit: scale-down;
 }

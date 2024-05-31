@@ -457,7 +457,6 @@ header nav a:hover{
     padding-left: 7rem;
     padding-right: 7rem;
     padding-top: 7rem;
-
 }
 
 .info_cont{
@@ -520,7 +519,6 @@ header nav a:hover{
     background-color: #EBEBEB;
     border: none;
     border-left: .4rem solid var(--color--sub);
-    margin-bottom: 1rem;
     padding-left: 1rem;
     padding-top: 1rem;
     font-size: 1.1rem;
@@ -543,7 +541,6 @@ header nav a:hover{
     font-family: var(--font--parrafo);
     border-radius: 5px;
     color: #707070;
-    margin-top: 1rem;
     font-size: 1.05rem;
     font-weight: 600;
     cursor: pointer;
@@ -553,6 +550,37 @@ header nav a:hover{
 .info_cont form button:hover{
     transform: scale(1.1);
 }
+
+/* Estilos para la calificación por estrellas */
+.rating {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: start;
+    gap: 5px; /* Espaciado entre las estrellas */
+    margin-bottom: 1rem; /* Alineado con otros inputs */
+}
+
+.rating input {
+    display: none;
+}
+
+.rating label {
+    font-size: 2.5rem;
+    color: #ccc; /* Color gris por defecto */
+    cursor: pointer;
+}
+
+.rating label::before {
+    content: "★";
+}
+
+.rating label:hover,
+.rating label:hover ~ label,
+.rating input:checked ~ label {
+    color: var(--color--sub); /* Color dorado al seleccionar */
+}
+
+
 
 /* FOOTER */
 
