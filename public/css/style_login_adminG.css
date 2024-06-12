@@ -113,7 +113,8 @@ background: linear-gradient(0deg, rgba(204,180,120,1) 0%, rgba(214,198,165,1) 10
 .contenedor {
   min-width: 600px;
   min-height: 600px;
-  border: 1px solid  #fff;
+  border-top: 1px solid  #fff;
+  border-right: 1px solid  #fff;
   backdrop-filter: blur(10px);
   border-radius: 50%;
   z-index: 1000;
@@ -145,6 +146,7 @@ background: linear-gradient(0deg, rgba(204,180,120,1) 0%, rgba(214,198,165,1) 10
   display: flex;
   flex-direction: column;
   justify-content: center;
+  position: relative;
 }
 
 .inputs label {
@@ -171,7 +173,33 @@ background: linear-gradient(0deg, rgba(204,180,120,1) 0%, rgba(214,198,165,1) 10
   color: #FEC95A;
 }
 
-.content_form form button {}
+.inputs input:focus{
+  outline: none;
+}
+
+.content_form form a{
+  width: 100%;
+  font-size: .7rem;
+  text-decoration: none;
+  color: #fff;
+  text-align: end;
+  margin-top: -.7rem;
+  transition: ease-in .2s;
+}
+
+.content_form form a:hover{
+  color: #fffcd0;
+}
+
+.content_form form button {
+  padding: .4rem 1.5rem;
+  font-size: .95rem;
+  font-weight: 600;
+  font-family: var(--font--banner--bool);
+  border: none;
+  border-radius: 10px;
+  color: #F4AC36;
+}
 
 .imagen {
   width: 30%;
@@ -181,4 +209,15 @@ background: linear-gradient(0deg, rgba(204,180,120,1) 0%, rgba(214,198,165,1) 10
   width: 100%;
   height: 100%;
   border-radius: 0px 20px 20px 0px;
+}
+
+.mostarC {
+  padding: 0 !important;
+  position: absolute;
+  right: 5%;
+  top: 50%;
+  transform: translateY(-50%);
+  border: none;
+  background: none;
+  cursor: pointer;
 }
