@@ -221,3 +221,23 @@ background: linear-gradient(0deg, rgba(204,180,120,1) 0%, rgba(214,198,165,1) 10
   background: none;
   cursor: pointer;
 }
+
+
+/* Agrega animación de deslizamiento desde la izquierda */
+@keyframes slideLeft {
+  from {
+      transform: translateX(-100%);
+  }
+  to {
+      transform: translateX(0);
+  }
+}
+
+/* Estilos para la transición */
+.contenedor,
+.fondo::after,
+.fondo::before,
+.cir{
+  animation: slideLeft 0.5s ease forwards;
+}
+
