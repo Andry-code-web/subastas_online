@@ -42,8 +42,6 @@ router.post('/loginAdminG', (req, res) => {
   });
 });
 
-
-
 router.get('/logout', function (req, res) {
   req.session.destroy((err) => {
     if (err) {
@@ -123,6 +121,10 @@ router.get("/test-session", (req, res) => {
   res.send(
     `ID del admin general: ${adminGeneralId}, ID del admin vendedor: ${adminVendedorId}`
   );
+});
+
+router.get('/recuperar', (req, res) => {
+  res.render('recup_contra');
 });
 
 module.exports = router;

@@ -122,6 +122,21 @@
     font-weight: 800;
 }
 
+.content_contra a{
+    font-size: .7rem;
+    font-family: var(--font--cont);
+    font-weight: 600;
+    width: 100%;
+    text-align: end;
+    text-decoration: none;
+    color: #000;
+    transition: ease-in-out .2s;
+}
+
+.content_contra a:hover{
+    color: #535353;
+}
+
 .subastar {
     margin-top: .5rem;
     text-align: center;
@@ -164,9 +179,7 @@
 
 #contraseña {
     width: 100%;
-    /* Make sure the input takes the full width */
     padding-right: 2.5rem;
-    /* Add padding to make space for the button */
 }
 
 .mostarC {
