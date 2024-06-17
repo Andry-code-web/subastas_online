@@ -59,6 +59,7 @@ router.get("/adminG", (req, res) => {
   
   const nombreUsuario = req.session.adminGeneralNombreUsuario;
   res.render('adminGeneral', { nombreUsuario });
+
 });
 
 router.post("/crear-admin-vendedor", async (req, res) => {
