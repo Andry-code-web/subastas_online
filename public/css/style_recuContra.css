@@ -92,6 +92,7 @@ body {
     background-color: #db0202;
 }
 
+<<<<<<< HEAD
 .content form button.active_key{
     display: none;
 }
@@ -108,6 +109,11 @@ body {
 
 .key.active{
     display: block;
+=======
+.key {
+    gap: .5rem;
+    min-width: 300px;
+>>>>>>> 5cc908ae700e4fb50c4cc22f6ec5973a364bceb2
 }
 
 .key p{
@@ -115,7 +121,10 @@ body {
     font-weight: 500;
     font-family: var(--font--parrafo);
     margin: 0;
+<<<<<<< HEAD
     margin-bottom: .5rem;
+=======
+>>>>>>> 5cc908ae700e4fb50c4cc22f6ec5973a364bceb2
     padding: 0;
 }
 
@@ -141,11 +150,15 @@ input[type=number] {
 
 .key input:focus{
     outline: none;
+<<<<<<< HEAD
     background-color: none;
+=======
+>>>>>>> 5cc908ae700e4fb50c4cc22f6ec5973a364bceb2
 }
 
 .new_contra{
     gap: 1rem;
+<<<<<<< HEAD
 }
 
 .new_contra.active_new_contra{
@@ -155,4 +168,6 @@ input[type=number] {
 .new_contra p{
     padding: 0;
     margin: 0;
+=======
+>>>>>>> 5cc908ae700e4fb50c4cc22f6ec5973a364bceb2
 }

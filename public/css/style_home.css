@@ -621,6 +621,29 @@ footer::before{
     margin-top: 12rem;
 }
 
+.subastar{
+    color: #ebebeb;
+    font-family: var(--font--about);
+    font-size: .9rem;
+    text-decoration: none;
+    transition: ease-in-out .3s;
+}
+
+.subastar span{
+    text-decoration: underline;
+    color: var(--color--sub);
+    transition: ease-in-out .3s;
+}
+
+.subastar:hover{
+    color: var(--color--sub);
+}
+
+.subastar:hover span{
+    color: #ebebeb;
+}
+
+
 .img_logo{
     width: 70%;
 }
@@ -631,6 +654,7 @@ footer::before{
 }
 
 .contet_footer p{
+    margin-top: 1rem;
     color: #444444;
 }
 

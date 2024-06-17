@@ -1,15 +1,31 @@
 const express = require('express');
+const session = require('express-session');
 const morgan = require('morgan');
 const path = require('path');
+require('dotenv').config();
+
+// Base de datos
+const conection = require('./src/database/db');
+const sessionStore = require('./src/database/sessionStore');
 
 const app = express();
 const port = process.env.PORT || 3000;
 
+// Middleware
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+app.use(morgan('dev'));
 
-// Base de datos
-require('./src/database/db');
+// Configuración de la sesión
+app.use(session({
+    secret: process.env.SESSION_SECRET || 'SUBASSTASONLINE',
+    store: sessionStore,
+    resave: false,
+    saveUninitialized: false,
+    cookie:{
+        maxAge: 1000 * 60 * 60 * 24 
+    }
+}))
 
 // Routers
 const usersRouter = require('./src/routes/user_routes');
@@ -22,13 +38,11 @@ app.use('/admin', adminRouter);
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'src/views'));
 app.use(express.static('public'));
-<<<<<<< Updated upstream
+<<<<<<< HEAD
 app.use(morgan('dev'));
-
 =======
-app.use('/uploads', express.static('uploads'));
->>>>>>> Stashed changes
 
+>>>>>>> 5cc908ae700e4fb50c4cc22f6ec5973a364bceb2
 
 app.listen(port, () => {
     console.log(`El servidor está corriendo en el puerto ${port}`);
