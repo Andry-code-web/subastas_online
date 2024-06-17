@@ -21,6 +21,10 @@ router.get('/subasta', (req, res) => {
     res.render('subastas');
 });
 
+router.get('/inmueble', (req, res) => {
+    res.render('inmueble');
+})
+
 router.post('/login', (req, res) => {
     const consulta = 'SELECT nombre, contraseña FROM usuarios;';
     const { usuario, contra } = req.body;
