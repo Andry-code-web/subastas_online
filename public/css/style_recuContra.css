@@ -92,11 +92,6 @@ body {
     background-color: #db0202;
 }
 
-<<<<<<< HEAD
-.key {
-    gap: .5rem;
-    min-width: 300px;
-=======
 .content form button.active_key{
     display: none;
 }
@@ -113,7 +108,6 @@ body {
 
 .key.active{
     display: block;
->>>>>>> ef2fb159d5755b2aa950f70dadb2ca49d393b02d
 }
 
 .key p{
@@ -121,10 +115,7 @@ body {
     font-weight: 500;
     font-family: var(--font--parrafo);
     margin: 0;
-<<<<<<< HEAD
-=======
     margin-bottom: .5rem;
->>>>>>> ef2fb159d5755b2aa950f70dadb2ca49d393b02d
     padding: 0;
 }
 
@@ -150,16 +141,11 @@ input[type=number] {
 
 .key input:focus{
     outline: none;
-<<<<<<< HEAD
-=======
     background-color: none;
->>>>>>> ef2fb159d5755b2aa950f70dadb2ca49d393b02d
 }
 
 .new_contra{
     gap: 1rem;
-<<<<<<< HEAD
-=======
 }
 
 .new_contra.active_new_contra{
@@ -169,5 +155,4 @@ input[type=number] {
 .new_contra p{
     padding: 0;
     margin: 0;
->>>>>>> ef2fb159d5755b2aa950f70dadb2ca49d393b02d
 }

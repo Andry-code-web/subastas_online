@@ -38,16 +38,7 @@ app.use('/admin', adminRouter);
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'src/views'));
 app.use(express.static('public'));
-<<<<<<< HEAD
-=======
-<<<<<<< Updated upstream
 app.use(morgan('dev'));
-
-=======
-app.use('/uploads', express.static('uploads'));
->>>>>>> Stashed changes
->>>>>>> ef2fb159d5755b2aa950f70dadb2ca49d393b02d
-
 
 app.listen(port, () => {
     console.log(`El servidor está corriendo en el puerto ${port}`);
