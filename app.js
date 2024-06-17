@@ -38,7 +38,11 @@ app.use('/admin', adminRouter);
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'src/views'));
 app.use(express.static('public'));
+<<<<<<< HEAD
 app.use(morgan('dev'));
+=======
+
+>>>>>>> 5cc908ae700e4fb50c4cc22f6ec5973a364bceb2
 
 app.listen(port, () => {
     console.log(`El servidor está corriendo en el puerto ${port}`);
