@@ -1,18 +1,3 @@
-<<<<<<< Updated upstream
-const express = require('express');
-const router = express.Router();
-
-router.get('/adminG', (req, res) => {
-    res.render('adminGeneral')
-});
-
-router.post('/adminG', (req, res) => {
-
-});
-
-router.get('/adminV', (req, res) => {
-    res.render('adminVendedor')
-=======
 const express = require("express");
 const bcrypt = require("bcrypt");
 const path = require("path");
@@ -77,16 +62,12 @@ router.get("/adminG", (req, res) => {
 
   const nombreUsuario = req.session.adminGeneralNombreUsuario;
   res.render("adminGeneral", { nombreUsuario });
->>>>>>> Stashed changes
 });
 
 router.post('/adminV', (req, res) => {
 
 });
 
-<<<<<<< Updated upstream
-module.exports = router;
-=======
 router.get("/adminV", (req, res) => {
   res.render("adminVendedor");
 });
@@ -211,4 +192,3 @@ router.get("/recuperar", (req, res) => {
 });
 
 module.exports = router;
->>>>>>> Stashed changes
